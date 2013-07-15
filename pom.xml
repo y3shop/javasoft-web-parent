@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.javasoft</groupId>
+		<artifactId>javasoft-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>javasoft-web-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>javasoft-web-parent</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.mysql.version>5.1.6</project.mysql.version>
+		<!-- 3.0.1报错 2.2.2正常 -->
+		<project.tiles.version>2.2.2</project.tiles.version>
+		<project.springsecurity.version>3.1.3.RELEASE</project.springsecurity.version>
+	</properties>
+
+
+	<dependencies>
+		<!-- j2ee支持 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${project.spring.version}</version>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${project.spring.version}</version>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${project.spring.version}</version>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${project.spring.version}</version>
+		</dependency>
+
+		<!-- spring security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-acl</artifactId>
+			<version>${project.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${project.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${project.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${project.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${project.springsecurity.version}</version>
+		</dependency>
+
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${project.mysql.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+
+		<!-- mybatits -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.1.1</version>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.1.1</version>
+			<!-- <classifier>sources</classifier> -->
+		</dependency>
+		<!-- tiles 组件 <dependency> <groupId>org.apache.tiles</groupId> <artifactId>tiles-api</artifactId> 
+			<version>${project.tiles.version}</version> </dependency> <dependency> <groupId>org.apache.tiles</groupId> 
+			<artifactId>tiles-jsp</artifactId> <version>${project.tiles.version}</version> 
+			</dependency> <dependency> <groupId>org.apache.tiles</groupId> <artifactId>tiles-core</artifactId> 
+			<version>${project.tiles.version}</version> </dependency> <dependency> <groupId>org.apache.tiles</groupId> 
+			<artifactId>tiles-servlet</artifactId> <version>${project.tiles.version}</version> 
+			</dependency> <dependency> <groupId>org.apache.tiles</groupId> <artifactId>tiles-template</artifactId> 
+			<version>${project.tiles.version}</version> </dependency> <dependency> <groupId>org.apache.tiles</groupId> 
+			<artifactId>tiles-velocity</artifactId> <version>${project.tiles.version}</version> 
+			</dependency> -->
+		<!-- velocity -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<!--spring mongodb -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.2.1.RELEASE</version>
+		</dependency>
+	</dependencies>
+</project>
+
